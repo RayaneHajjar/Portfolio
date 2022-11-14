@@ -31,7 +31,6 @@ const Projects = () => {
                 });
             }
             setProjects(loadedProjects);
-            console.log(loadedProjects);
             setIsLoading(false);
         };
 

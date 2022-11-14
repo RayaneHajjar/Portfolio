@@ -15,7 +15,6 @@ const Header = () => {
 
     const [headerBackground, setHeaderBackground] = useState(false);
     const changeBackground = () => {
-        console.log(window.scrollY);
         if (window.scrollY >= 60) {
             setHeaderBackground(true);
         } else {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { send } from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import classes from '../styles/contactform.module.scss';
 import Modal from './Modal';
 import LoadingSpinner from './LoadingSpinner';
@@ -40,7 +40,7 @@ const ContactForm = () => {
         event.preventDefault();
         if (error === '') {
             setSubmitted(true);
-            send(
+            emailjs.send(
                 'service_ddtsq6m',
                 'template_gkk7cx9',
                 infos,
