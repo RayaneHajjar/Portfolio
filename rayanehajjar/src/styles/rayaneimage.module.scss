@@ -1,0 +1,53 @@
+@import '../styles/mixin.scss';
+
+.shape_outer {
+    display: flex;
+    flex-shrink: 0;
+    height: 350px;
+    width: 350px;
+    background-image: linear-gradient(
+        to bottom right,
+        $brown-light,
+        $brown-dark,
+        $blue-dark
+    );
+    @include mobile {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+.shape_inner {
+    height: 300px;
+    width: 300px;
+    background: url('../assets/Rayane.jpg') no-repeat center;
+    background-size: cover;
+    margin: auto;
+    @include mobile {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+.octagon {
+    -webkit-clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+    );
+    clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+    );
+}

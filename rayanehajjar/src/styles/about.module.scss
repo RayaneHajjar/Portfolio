@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+@import './mixin.scss';
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue-light;
+    @include tabmob {
+        flex-direction: column;
+    }
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    animation: bounceIn;
+    animation-duration: 1s;
+    @include mobile {
+        padding-bottom: 0;
+    }
+}
+
+.content {
+    padding: 30px;
+    @include mobile {
+        padding-bottom: 0;
+    }
+
+    p:first-of-type {
+        font-family: 'Lato', sans-serif;
+        font-size: 50px;
+        color: $brown-dark;
+        padding-bottom: 40px;
+        @include tablet {
+            font-size: 60px;
+            text-align: center;
+        };
+        @include mobile {
+            text-align: center;
+            font-size: 22px;
+            padding-bottom: 20px;
+        }
+    }
+
+    p:not(:first-of-type) {
+        font-family: 'Cairo', sans-serif;
+        font-size: 17px;
+        color: $brown-dark;
+        padding-bottom: 10px;
+        @include tablet {
+            font-size: 22px;
+        };
+        @include mobile {
+            font-size: 10px;
+        }
+    }
+}

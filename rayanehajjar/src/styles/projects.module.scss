@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@900&display=swap');
+
+@import './mixin.scss';
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: $blue-light;
+    padding: 100px 40px;
+
+    h1 {
+        font-family: 'Merienda', cursive;
+        font-size: 50px;
+        color: $brown-dark;
+        padding-bottom: 20px;
+        @include mobile {
+            font-size: 40px;
+            padding-bottom: 15px;
+        }
+    }
+};
+
+.loading {
+    text-align: center;
+    color: white;
+}
+
+.error {
+    text-align: center;
+    color: red;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+	gap: 30px;
+    @include tabmob {
+        flex-direction: column;
+    }
+}

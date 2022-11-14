@@ -1,0 +1,25 @@
+$blue-light: #c8d2d6;
+$blue-dark: #6d7e8c;
+$blue-overlay: rgba(109, 126, 140, 0.9);
+$brown-light: #9c8d78;
+$brown-dark: #6e675a;
+$brown-overlay: rgba(110, 103, 90, 0.9);
+$white: #fff;
+
+@mixin mobile {
+    @media only screen and (max-width: 688px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media only screen and (min-width: 688px) and (max-width: 992px) {
+        @content
+    }
+};
+
+@mixin tabmob {
+    @media only screen and (max-width: 992px) {
+        @content
+    }
+}

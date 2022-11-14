@@ -1,0 +1,39 @@
+@import './mixin.scss';
+
+.language_card {
+    background-color: $blue-light;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mobile {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+}
+
+.language_title {
+    color: $brown-dark;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    /* margin-top: 10px; */
+    @include mobile {
+        font-size: 8px;
+    }
+}
+
+.language_icon {
+    color: $brown-dark;
+    font-size: 30px;
+    text-align: center;
+    @include mobile {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Geostar&display=swap');
+
+@import './mixin.scss';
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(156, 141, 120, 0.6);
+    padding: 100px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include tabmob {
+        padding: 70px 30px;
+        gap: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.left_side {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 20px;
+    @include mobile {
+        padding: 10px;
+    }
+
+    h1 {
+        font-family: 'Geostar', cursive;
+        font-size: 70px;
+        color: $brown-dark;
+        padding-bottom: 30px;
+        @include mobile {
+            font-size: 40px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .spoken_languages {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0 0 30px 20px;
+        @include mobile {
+            padding: 0 0 15px 0;
+        }
+
+        li {
+            font-family: 'Lucida Sans', sans-serif;
+            font-weight: bolder;
+            color: $brown-dark;
+            padding: 7px;
+            background-color: $blue-light;
+            border-radius: 5px;
+            width: 35px;
+            text-align: center;
+            @include mobile {
+                padding: 5px;
+                width: 25px;
+                font-size: 10px;
+            }
+        }
+
+        li + li {
+            margin-left: 10px;
+        }
+    }
+
+    .personal_skills {
+        counter-reset: index;
+        font-family: 'Lucida Sans', sans-serif;
+
+        li {
+            counter-increment: index;
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            color: $brown-dark;
+            font-weight: bolder;
+            @include mobile {
+                padding: 3px 0;
+                font-size: 14px;
+            }
+            &::before {
+                content: counters(index, ".", decimal-leading-zero);
+                font-size: 1.5rem;
+                text-align: right;
+                font-weight: bold;
+                min-width: 50px;
+                padding-right: 12px;
+                font-variant-numeric: tabular-nums;
+                align-self: flex-start;
+                background-color: $blue-dark;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @include mobile {
+                    font-size: 20px;
+                    text-align: left;
+                    min-width: 20px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.right_side {
+    width: 500px;
+    background-color: $blue-dark;
+    box-shadow: 5px 5px 5px $brown-dark;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile {
+        width: 80vw;
+        padding: 10px;
+    }
+
+    .skill_content {
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .controls {
+        display: flex;
+        list-style: none;
+        justify-items: center;
+        align-items: center;
+        padding: 0 10px 0 5px;
+
+        li {
+            padding-left: 6px;
+            font-size: 50px;
+            color: $brown-dark;
+            @include mobile {
+                font-size: 30px;
+            }
+            &.active {
+                color: $blue-light;
+            }
+        }
+    }
+}

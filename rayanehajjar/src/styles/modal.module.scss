@@ -1,0 +1,29 @@
+@import './mixin.scss';
+
+.modal {
+    z-index: 30;
+    position: fixed;
+    background-color: $white;
+    border-radius: 5px;
+    text-align: center;
+    color: $brown-dark;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    top: 15vh;
+    left: 30vw;
+    width: 40vw;
+    padding: 20px;
+    height: 20vh;
+    top: 40vh;
+
+    @include tabmob {
+        padding: 10px;
+        width: 80vw;
+        left: 10vw;
+    }
+}

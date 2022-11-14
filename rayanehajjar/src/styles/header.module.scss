@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
+
+@import './mixin.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    transition: 0.3s ease-in;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+
+    &.background {
+        background-color: $blue-light;
+        box-shadow: 0 0 10px 0 $brown-dark;
+    }
+}
+
+.logo {
+    height: 40px;
+}
+
+.hamburger {
+    font-size: 40px;
+    display: none;
+    cursor: pointer;
+    color: $brown-dark;
+    @include mobile {
+        font-size: 30px;
+    }
+    @include tabmob {
+        display: flex;
+        vertical-align: middle;
+    }
+}
+
+.nav_menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    @include tabmob {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        flex-direction: column;
+        background-color: $brown-overlay;
+        width: 100%;
+        z-index: 999;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav_item {
+        position: relative;
+        padding: 8px 10px 8px 10px;
+
+        a {
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 5px;
+            color: $blue-dark;
+            @include tabmob {
+                color: $white;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: $brown-dark;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+                @include tabmob {
+                    background-color: $blue-light;
+                }
+            }
+            &:hover {
+                color: $brown-dark;
+                @include tabmob {
+                    color: $blue-light;
+                }
+                &::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+    }
+    &.open {
+        top: 68px;
+        .nav_item {
+            margin: 5px 0;
+        }
+    }
+}
+
+.soc_links {
+    display: flex;
+    list-style: none;
+    justify-items: center;
+    align-items: center;
+    padding: 0 10px 0 5px;
+    @include tabmob {
+        display: none;
+    }
+
+    li {
+        padding-left: 6px;
+        color: $brown-dark;
+        &:hover {
+            color: $blue-dark;
+            cursor: pointer;
+        }
+    }
+}

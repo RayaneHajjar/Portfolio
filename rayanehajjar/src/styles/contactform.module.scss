@@ -1,0 +1,58 @@
+@import './mixin.scss';
+
+.form_controls {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 25px;
+}
+
+.form_control {
+    padding-bottom: 10px;
+}
+
+.label {
+    font-size: 15px;
+    font-weight: bolder;
+    color: $brown-dark;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+    &:focus {
+        outline-color: $blue-light;
+    }
+}
+
+.submit {
+    text-align: center;
+}
+
+.button {
+    background-color: $blue-light;
+    color: $brown-dark;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    &:hover,
+    :active {
+        background-color: $brown-dark;
+        color: $white;
+    }
+}
+
+.error {
+    color: $white;
+    font-size: 15px;
+    padding: 0 0 10px 5px;
+}
