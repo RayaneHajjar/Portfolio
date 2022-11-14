@@ -52,22 +52,22 @@ const Header = () => {
                 }
             >
                 <li className={classes.nav_item}>
-                    <HashLink to='#about' onClick={closeMenu}>
+                    <HashLink smooth to='#about' onClick={closeMenu}>
                         About
                     </HashLink>
                 </li>
                 <li className={classes.nav_item}>
-                    <HashLink to='#skills' onClick={closeMenu}>
+                    <HashLink smooth to='#skills' onClick={closeMenu}>
                         Skills
                     </HashLink>
                 </li>
                 <li className={classes.nav_item}>
-                    <HashLink to='#projects' onClick={closeMenu}>
+                    <HashLink smooth to='#projects' onClick={closeMenu}>
                         Projects
                     </HashLink>
                 </li>
                 <li className={classes.nav_item}>
-                    <HashLink to='#contact' onClick={closeMenu}>
+                    <HashLink smooth to='#contact' onClick={closeMenu}>
                         Contact
                     </HashLink>
                 </li>
