@@ -16,7 +16,7 @@ const Particle = () => {
             height='100vh'
             options={{
                 fullScreen: false,
-                fpsLimit: 100,
+                fpsLimit: 50,
                 interactivity: {
                     events: {
                         onClick: {

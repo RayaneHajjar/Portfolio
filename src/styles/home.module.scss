@@ -18,6 +18,7 @@
 
     &::before {
         content: '';
+        background-color: $blue-light;
         background: url('../assets/Barcelona.png') no-repeat center center/cover;
         height: 100%;
         width: 100%;
